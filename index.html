@@ -77,14 +77,19 @@
 
     /* Tilted video box */
     .hero-video {
-    position: absolute;
-    top: 180px;
-    right: 0px;
-    width: 40%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    z-index: 0;
-    border-radius: 5px;
-    overflow: hidden;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 50%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      z-index: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
     }
 
     .hero-video video {
@@ -95,39 +100,30 @@
 
     /* CARD SECTION */
     .card-section {
-      
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 50px 10%;
       background-color: #ffffff;
     }
 
-    .top-card {
-      background: rgb(248, 240, 194);
-      border: 1px solid #f97705;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      padding: 20px;
-      width: 280px;
-      transition: transform 0.3s ease;
-    }
-    
-    .card {
+    .top-card, .card {
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.08);
       padding: 20px;
-      width: 280px;
+      width: calc((100% - 40px) / 3);
       transition: transform 0.3s ease;
     }
 
-    .top-card:hover {
-      transform: translateY(10px);
-      box-shadow: 0 12px 24px rgba(101, 247, 205, 0.1);
+    .top-card {
+      background: rgb(248, 240, 194);
+      border: 1px solid #f97705;
     }
-    
-    .card:hover {
+
+    .top-card:hover, .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 24px rgba(0,0,0,0.1);
     }
@@ -140,6 +136,41 @@
     .card p {
       font-size: 0.95em;
       color: #444;
+    }
+
+    /* TEST DRIVE FORM */
+    .test-drive-form {
+      padding: 50px 10%;
+      background-color: #f9f9f9;
+    }
+
+    .test-drive-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .test-drive-form input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .test-drive-form button {
+      padding: 10px;
+      background-color: #003566;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      text-align: center;
     }
 
     /* Responsive Adjustments */
@@ -158,9 +189,12 @@
       }
 
       .card-section {
-        
         align-items: center;
         padding: 30px 5%;
+      }
+
+      .top-card, .card {
+        width: 100%;
       }
     }
   </style>
@@ -209,7 +243,33 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Autonomous Driving</h3>
+      <p>Level 4 autonomous driving capabilities.</p>
+    </div>
+    <div class="card">
+      <h3>Unique Design</h3>
+      <p>Futuristic and unique appearance.</p>
+    </div>
   </section>
+
+  <!-- TEST DRIVE FORM -->
+  <section class="test-drive-form">
+    <form>
+      <p>Mercedes Vision AVTR Test Drive Form</p>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Phone Number">
+      <input type="id" placeholder="ID Card Number">
+      <button type="submit">Request Test Drive</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Programmimg4</p>
+    <p>Get in touch with us :<a href="https://www.mercedes-benz.com.cn/complaint-hotline.html">https://www.mercedes-benz.com.cn/complaint-hotline.html</a></p>
+  </footer>
 
 </body>
 </html>
